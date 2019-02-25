@@ -6,7 +6,7 @@ Changes the releases' owner to the Wordpress user, in order to be able to instal
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'capistrano-wordpress'
+gem 'capistrano-wordpress-permissions'
 ```
 
 And then execute:
@@ -22,8 +22,22 @@ Or install it yourself as:
 Add the following lines inside your Capfile:
 
 ```ruby
-require 'capistrano/wordpress'
+require 'capistrano/wordpress/permissions'
 install_plugin Capistrano::Wordpress::Permissions
+```
+
+This plugin needs to fetch the deployment user. 
+It is thereby necessary to set it in your configuration file(s):
+
+```ruby
+set :user, '[REPLACE_WITH_DEPLOYMENT_USER]'
+```
+
+By default, this plugin use the wordpress user "www-data". 
+It is possible to change this user in your configuration file(s):
+
+```ruby
+set :wordpress_user, '[YOUR_WORDPRESS_USER]'
 ```
 
 ## Contributing
