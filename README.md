@@ -1,6 +1,8 @@
-# Capistrano::Wordpress
+# Capistrano::Wordpress::Permissions
 
-Changes the releases' owner to the Wordpress user, in order to be able to install and update plugins.
+Changes the releases' owner to the Wordpress user. 
+Fixes issues where the Wordpress user does not have enough permissions to install or update plugins.
+
 ## Installation
 
 Add this line to your application's Gemfile:

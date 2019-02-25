@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['alexzicat@teamhubble.com']
 
   spec.summary       = %q{Changes the releases' owner to the Wordpress user.}
-  spec.description   = %q{Changes the releases' owner to the Wordpress user, in order to be able to install and update plugins.}
+  spec.description   = %q{Changes the releases' owner to the Wordpress user. Fixes issues where the Wordpress user does not have enough permissions to install or update plugins.}
   spec.homepage      = 'https://github.com/teamhubble/capistrano-wordpress'
   spec.license       = 'MIT'
 
