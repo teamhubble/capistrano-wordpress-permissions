@@ -1,8 +1,7 @@
-require "capistrano/wordpress/version"
+require 'capistrano/wordpress/version'
+require 'capistrano/wordpress/permissions'
 
 module Capistrano
   module Wordpress
-    class Error < StandardError; end
-    # Your code goes here...
   end
 end
