@@ -17,7 +17,7 @@ module Capistrano
       end
 
       def register_hooks
-        before(:'deploy:cleanup', :'wordpress:change_owner_to_deploy')
+        before(:'deploy:started', :'wordpress:change_owner_to_deploy')
         after(:'deploy:finished', :'wordpress:change_owner_to_wordpress')
       end
 
@@ -26,7 +26,7 @@ module Capistrano
       def change_owner(user)
         on(roles(:all)) do |host|
           within(deploy_path) do
-            sudo(:chown, '-R', "#{user}:#{user}", 'releases/*')
+            sudo(:chown, '-R', "#{user}:#{user}", '.')
           end
         end
       end

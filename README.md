@@ -1,6 +1,6 @@
 # Capistrano::Wordpress::Permissions
 
-Changes the releases' owner to the Wordpress user. 
+Changes the app owner to the Wordpress user. 
 Fixes issues where the Wordpress user does not have enough permissions to install or update plugins.
 
 ## Installation
