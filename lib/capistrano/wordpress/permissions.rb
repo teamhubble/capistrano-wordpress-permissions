@@ -17,7 +17,7 @@ module Capistrano
       end
 
       def register_hooks
-        before(:'deploy:starting', :'wordpress:change_owner_to_deploy')
+        before(:'deploy:started', :'wordpress:change_owner_to_deploy')
         after(:'deploy:finished', :'wordpress:change_owner_to_wordpress')
       end
 
