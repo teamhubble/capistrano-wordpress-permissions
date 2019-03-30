@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    capistrano-wordpress-permissions (1.1.0)
+    capistrano-wordpress-permissions (1.1.1)
       capistrano (~> 3)
 
 GEM
